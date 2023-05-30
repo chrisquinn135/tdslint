@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap');
+
+/* Body Structures */
+body {
+  font: 12px 'Libre Franklin', 'cursive';
+  font-family: 'Libre Franklin', 'cursive';
+  text-align: center;
+  margin: 0;
+}
+
+/* Text */
+.text-sm-reg {
+  font: 12px 'Libre Franklin';
+  font-weight: 400;
+}
+
+.text-sm-med {
+  font: 12px 'Libre Franklin';
+  font-weight: 500;
+}
+
+.text-md-reg {
+  font: 14px 'Libre Franklin';
+  font-weight: 400;
+}
+
+.text-md-med {
+  font: 14px 'Libre Franklin';
+  font-weight: 500;
+}
+
+.text-lg-reg {
+  font: 14px 'Libre Franklin';
+  font-weight: 400;
+}
+
+.text-lg-med {
+  font: 16px 'Libre Franklin';
+  font-weight: 500;
+}
+
+.text-xl-med {
+  font: 18px 'Libre Franklin';
+  font-weight: 500;
+}
