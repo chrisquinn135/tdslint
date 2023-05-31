@@ -38,4 +38,3 @@ figma.ui.onmessage = msg => {
     // keep running, which shows the cancel button at the bottom of the screen.
     figma.closePlugin();
 };
-//# sourceMappingURL=code.js.map

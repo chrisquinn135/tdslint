@@ -18,6 +18,8 @@
     <Error title={'Error 2'} id={4} is_focus={active} desc={"This is an error of an error"}/>
     <Error title={'Error 2'} id={5} is_focus={active} desc={"This is an error of an error"}/>
     <Error title={'Error 2'} id={6} is_focus={active} desc={"This is an error of an error"}/>
+    <Error title={'Error 2'} id={5} is_focus={active} desc={"This is an error of an error"}/>
+    <Error title={'Error 2'} id={6} is_focus={active} desc={"This is an error of an error"}/>
 </div>
 
 <style>
@@ -27,5 +29,7 @@
         flex-direction: column;
         gap:8px;;
         align-items: stretch;
+        overflow-y: scroll;
+        height: 80vh;
     }
 </style>

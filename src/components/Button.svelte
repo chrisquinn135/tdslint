@@ -1,8 +1,9 @@
 <script>
     export let onClick;
+    export let type;
 </script>
 
-<button class="button-secondary text-lg-med" on:click={onClick}>
+<button class={type == 'primary' ? "button-secondary" : ""} on:click={onClick}>
     <slot></slot>
 </button>
 
@@ -11,7 +12,6 @@
         border: 1px solid #808080;
         border-radius: 8px;
         padding: 8px 16px;
-        flex-grow: 1;
         background-color: #ffffff;
         color: #121212;
     }
