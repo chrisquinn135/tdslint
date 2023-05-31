@@ -20,7 +20,7 @@
         display: flex;
         grid-gap: 16px;
         border-bottom-style: solid;
-        border-color: #ebebf0;
+        border-color: #d5d5d5;
         border-width: 1px;
         justify-items: center;
         align-items: center;

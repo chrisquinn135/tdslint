@@ -5,3 +5,6 @@ export const activeTab = writable('swap')
 
 // current active menu
 export const activeMenu = writable('color')
+
+// current focus
+export const activeFocus = writable(-1)

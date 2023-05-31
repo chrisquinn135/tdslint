@@ -6,7 +6,7 @@
 
 <style>
     .first {
-        padding: 12px 16px;
+        padding: 12px 8px;
         color: #121212;
         text-align: left;
     }
