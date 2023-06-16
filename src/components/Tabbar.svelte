@@ -10,8 +10,8 @@
 </script>
 
 <div class="tabbar">
-    <Tab name={"Page"} id={"swap"} isActive={active == "swap"}/>
-    <Tab name={"Selection"} id={"history"} isActive={active == "history"}/>
+    <Tab name={"Page"} id={"page"} isActive={active == "page"}/>
+    <Tab name={"Selection"} id={"selection"} isActive={active == "selection"}/>
     <Tab name={"Configuration"} id={"config"} isActive={active == "config"}/>
 </div>
 

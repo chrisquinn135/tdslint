@@ -3,21 +3,33 @@
     export let type;
 </script>
 
-<button class={type == 'primary' ? "button-secondary" : ""} on:click={onClick}>
-    <slot></slot>
+<button
+    class={`${
+        type == "primary"
+            ? "text-md-med primary"
+            : type == "tertiary"
+            ? "text-md-med tertiary"
+            : type == "link"
+            ? "text-sm-med link"
+            : ""
+    }`}
+    on:click={onClick}
+>
+    <slot />
 </button>
 
 <style>
-    .button-secondary {
-        border: 1px solid #808080;
+    .primary {
         border-radius: 8px;
-        padding: 8px 16px;
-        background-color: #ffffff;
-        color: #121212;
+        border: none;
+        padding: 12px 16px;
+        background-color: #004c45;
+        color: white;
+        flex-grow: 1;
     }
 
-    .button-secondary:hover {
-        background-color: #E5F0E8;
+    .primary:hover {
+        background-color: #172d2d;
         animation-name: on-hover-button;
         animation-duration: 100ms;
         cursor: pointer;
@@ -25,26 +37,37 @@
 
     @keyframes on-hover-button {
         0% {
-            background-color: #ffffff;
+            background-color: #004c45;
         }
         100% {
-            background-color: #E5F0E8;
+            background-color: #172d2d;
         }
     }
 
-    .button-tertiary {
+    .tertiary {
         border-radius: 8px;
-        color: #242426;
+        padding: 12px 16px;
+        border: none;
+        color: #172d2d;
+        background-color: white;
         cursor: pointer;
     }
 
-    .button-tertiary-on {
-        border-radius: 8px;
-        color: #169794;
+    .tertiary:hover {
+        background-color: #e5f0e8;
         cursor: pointer;
     }
 
-    .button-tertiary:hover {
-        color: #169794;
+    .link {
+        border: none;
+        background: none;
+        color: #128ba6;
+        cursor: pointer;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #0e687d;
     }
 </style>

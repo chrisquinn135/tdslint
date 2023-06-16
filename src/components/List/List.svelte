@@ -1,33 +1,25 @@
 <script>
     import Error from "./Error.svelte";
 
-    import { activeFocus } from "../../store";
-    
-    // set the active tab
-    let active;
-    activeFocus.subscribe((value) => {
-        active = value;
-    });
+    export let list;
+    export let type;
 </script>
 
-<div class='container'>
-    <Error title={'Error 1'} id={0} is_focus={active} desc={"This is an error"}/>
-    <Error title={'Error 2'} id={1} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={2} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={3} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={4} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={5} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={6} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={5} is_focus={active} desc={"This is an error of an error"}/>
-    <Error title={'Error 2'} id={6} is_focus={active} desc={"This is an error of an error"}/>
+<div class="container">
+    {#each list as item}
+        <Error
+            obj={item}    
+            type={type}
+        />
+    {/each}
 </div>
 
 <style>
     .container {
-        padding:16px;
-        display:flex;
+        padding: 8px;
+        display: flex;
         flex-direction: column;
-        gap:8px;;
+        gap: 8px;
         align-items: stretch;
         overflow-y: scroll;
         height: 80vh;

@@ -1,5 +1,5 @@
 <script>
-    import { activeMenu } from "../../store";
+    import { activeFocusPage, activeFocusSelection, activeMenu } from "../../store";
     import Tag from "../Tag.svelte";
 
     export let isActive;
@@ -10,20 +10,27 @@
     // set current menu
     function onClick() {
         activeMenu.set(id);
+        activeFocusPage.set(-1);
+        activeFocusSelection.set(-1)
     }
 </script>
 
 <div
     class={`text-sm-reg ${isActive ? "second--state-active" : "second"}`}
     on:click={onClick}
->
+>   <div class='padding'>
     {name}
+
+</div>
     {#if number > 0} 
         <Tag number={number} />
     {/if}
 </div>
 
 <style>
+    .padding {
+        padding: 2px 0px;
+    }
     .second {
         padding: 12px 16px;
         border-radius: 8px;
